@@ -1,25 +1,24 @@
 .header {
+  width: 100%;
   border-bottom: 1px solid $border-header;
   &__body {
     display: flex;
     align-items: center;
   }
 }
-// .header__body {
-//   display: flex;
-//   align-items: center;
-// }
+
 .nav {
   display: flex;
+  width: 100%;
+  justify-content: space-between;
   align-items: center;
 }
 .logo {
-  padding: 24px 0;
-
+  padding: 16px 0;
   font-family: Raleway, sans-serif;
   font-weight: 700;
-  font-size: 26px;
-  line-height: calc(31 / 26);
+  font-size: 24px;
+  line-height: calc(28 / 24);
   letter-spacing: 0.03em;
   color: $black;
 
@@ -27,89 +26,177 @@
     color: $blue;
   }
 }
-// .logo__span {
-//   color: $blue;
-// }
-.menu {
-  list-style: none;
-  display: flex;
-  margin-left: 93px;
-
-  & > .menu__item:not(:first-child) {
-    margin-left: 50px;
-  }
+.header__burger-button {
+  border: none;
+  background-color: $white;
+  padding: 10px 0;
+  cursor: pointer;
+}
+.header_burger {
+  display: block;
 }
 
-.menu__link {
-  position: relative;
-  display: block;
-  padding: 32px 0;
-  font-weight: 500;
-  line-height: calc(16 / 14);
-  letter-spacing: 0.02em;
-  color: $dark;
+.menu {
+  display: none;
+}
+.header__contacts {
+  display: none;
+}
 
-  &::after {
-    position: absolute;
+@media screen and (min-width: 768px) {
+  .logo {
+    padding: 26px 0;
+  }
+
+  .nav {
+    gap: 88px;
+    width: auto;
+    justify-content: start;
+  }
+
+  .header__burger-button {
+    display: none;
+  }
+
+  .menu {
+    list-style: none;
+    display: flex;
+    & > .menu__item:not(:first-child) {
+      margin-left: 52px;
+    }
+  }
+
+  .menu__link {
+    position: relative;
     display: block;
-    left: 0;
-    bottom: -1px;
-    content: "";
-    height: 4px;
-    width: 100%;
-    border-radius: 2px;
-    background-color: $blue;
-    transition: transform $time cubic-bezier(0.4, 0, 0.2, 1);
-    transform: scaleX(0);
-  }
-  &:hover::after,
-  &:focus::after {
-    transform: scaleX(1);
-  }
-
-  &--current {
-    color: $blue;
+    padding: 32px 0;
+    font-weight: 500;
+    line-height: calc(16 / 14);
+    letter-spacing: 0.02em;
+    color: $dark;
 
     &::after {
+      position: absolute;
+      display: block;
+      left: 0;
+      bottom: -1px;
+      content: "";
+      height: 4px;
+      width: 100%;
+      border-radius: 2px;
+      background-color: $blue;
+      transition: transform $time $cubic;
+      transform: scaleX(0);
+    }
+    &:hover::after,
+    &:focus::after {
       transform: scaleX(1);
+    }
+
+    &--current {
+      color: $blue;
+
+      &::after {
+        transform: scaleX(1);
+      }
+    }
+  }
+
+  .header__contacts {
+    display: block;
+    margin-left: auto;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: calc(14 / 12);
+    letter-spacing: 0.02em;
+  }
+
+  .header__email {
+    display: flex;
+    align-items: center;
+    padding-top: 21px;
+    color: inherit;
+    margin-bottom: 10px;
+  }
+
+  .header__tel {
+    display: flex;
+    align-items: center;
+    padding-bottom: 21px;
+    color: inherit;
+  }
+
+  .mail__icon {
+    display: block;
+    margin-right: 10px;
+    fill: $default-gray;
+    transition: fill $time $cubic;
+
+    .header__email:hover > &,
+    .header__email:focus > & {
+      fill: $blue;
+    }
+  }
+
+  .phone__icon {
+    display: block;
+    margin-right: 10px;
+    fill: $default-gray;
+    transition: fill $time $cubic;
+
+    .header__tel:focus > &,
+    .header__tel:hover > & {
+      fill: $blue;
     }
   }
 }
 
-.header__contacts {
-  display: flex;
-  margin-left: auto;
-  font-weight: 500;
-  line-height: calc(16 / 14);
-  letter-spacing: 0.02em;
-  list-style: none;
+@media screen and (min-width: 900px) {
+  .header__contacts {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
 
-  & > li:not(:first-child) {
-    margin-left: 50px;
+  .header__email,
+  .header__tel {
+    padding: 32px 0;
+    margin-bottom: 0;
   }
 }
 
-.header__email,
-.header__tel {
-  display: flex;
-  align-items: center;
-  padding: 32px 0;
-  color: inherit;
-}
+@media screen and (min-width: 1200px) {
+  .nav {
+    gap: 92px;
+  }
 
-//Спросить про это!
+  .logo {
+    padding: 24px 0;
+    font-size: 26px;
+    line-height: calc(31 / 26);
+  }
 
-.mail__icon,
-.phone__icon {
-  display: block;
-  margin-right: 10px;
-  fill: $default-gray;
-  transition: fill $time cubic-bezier(0.4, 0, 0.2, 1);
+  .menu {
+    margin-left: 93px;
 
-  .header__email:hover > &,
-  .header__email:focus > &,
-  .header__tel:focus > &,
-  .header__tel:hover > & {
-    fill: $blue;
+    & > .menu__item:not(:first-child) {
+      margin-left: 50px;
+    }
+  }
+
+  .header__contacts {
+    font-size: 14px;
+    line-height: calc(16 / 14);
+    gap: 50px;
+  }
+
+  .mail__icon {
+    width: 16px;
+    height: 12px;
+  }
+
+  .phone__icon {
+    width: 10px;
+    height: 16px;
   }
 }
