@@ -1,0 +1,26 @@
+@mixin button(
+  $padding-y: 10px,
+  $padding-x: 32px,
+  $width: auto,
+  $shadow: 0px 4px 4px rgba(0, 0, 0, 0.15),
+  $fweight: 700,
+  $fsize: 16px,
+  $lheight: calc(30 / 16),
+  $let-spacing: 0.06em,
+  $color: $white,
+  $bgcolor: $blue
+) {
+  padding: $padding-y $padding-x $padding-y $padding-x;
+  width: $width;
+  box-shadow: $shadow;
+  color: $color;
+  background-color: $bgcolor;
+  font-weight: $fweight;
+  font-size: $fsize;
+  line-height: $lheight;
+  text-align: center;
+  letter-spacing: $let-spacing;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}

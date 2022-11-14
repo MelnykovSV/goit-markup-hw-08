@@ -1,0 +1,42 @@
+.services {
+  padding-bottom: 94px;
+
+  &__title {
+    margin-bottom: 50px;
+
+    font-size: 36px;
+    line-height: calc(42 / 36);
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: $dark;
+  }
+
+  &__item {
+    display: block;
+    position: relative;
+  }
+
+  &__description {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 27px 0;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: calc(16 / 14);
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: $white;
+    background-color: rgba(47, 48, 58, 0.8);
+  }
+  &__list {
+    list-style: none;
+    display: flex;
+
+    & .services__item:not(:first-child) {
+      margin-left: 30px;
+    }
+  }
+}

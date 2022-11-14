@@ -1,0 +1,115 @@
+.header {
+  border-bottom: 1px solid $border-header;
+  &__body {
+    display: flex;
+    align-items: center;
+  }
+}
+// .header__body {
+//   display: flex;
+//   align-items: center;
+// }
+.nav {
+  display: flex;
+  align-items: center;
+}
+.logo {
+  padding: 24px 0;
+
+  font-family: Raleway, sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: calc(31 / 26);
+  letter-spacing: 0.03em;
+  color: $black;
+
+  &__span {
+    color: $blue;
+  }
+}
+// .logo__span {
+//   color: $blue;
+// }
+.menu {
+  list-style: none;
+  display: flex;
+  margin-left: 93px;
+
+  & > .menu__item:not(:first-child) {
+    margin-left: 50px;
+  }
+}
+
+.menu__link {
+  position: relative;
+  display: block;
+  padding: 32px 0;
+  font-weight: 500;
+  line-height: calc(16 / 14);
+  letter-spacing: 0.02em;
+  color: $dark;
+
+  &::after {
+    position: absolute;
+    display: block;
+    left: 0;
+    bottom: -1px;
+    content: "";
+    height: 4px;
+    width: 100%;
+    border-radius: 2px;
+    background-color: $blue;
+    transition: transform $time cubic-bezier(0.4, 0, 0.2, 1);
+    transform: scaleX(0);
+  }
+  &:hover::after,
+  &:focus::after {
+    transform: scaleX(1);
+  }
+
+  &--current {
+    color: $blue;
+
+    &::after {
+      transform: scaleX(1);
+    }
+  }
+}
+
+.header__contacts {
+  display: flex;
+  margin-left: auto;
+  font-weight: 500;
+  line-height: calc(16 / 14);
+  letter-spacing: 0.02em;
+  list-style: none;
+
+  & > li:not(:first-child) {
+    margin-left: 50px;
+  }
+}
+
+.header__email,
+.header__tel {
+  display: flex;
+  align-items: center;
+  padding: 32px 0;
+  color: inherit;
+}
+
+//Спросить про это!
+
+.mail__icon,
+.phone__icon {
+  display: block;
+  margin-right: 10px;
+  fill: $default-gray;
+  transition: fill $time cubic-bezier(0.4, 0, 0.2, 1);
+
+  .header__email:hover > &,
+  .header__email:focus > &,
+  .header__tel:focus > &,
+  .header__tel:hover > & {
+    fill: $blue;
+  }
+}
