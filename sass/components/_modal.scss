@@ -24,7 +24,7 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%) scale(1) rotate(0deg);
-  width: 450px;
+  width: 350px;
   padding: 8px;
   padding: 40px;
   background: $white;
@@ -48,16 +48,15 @@
   align-items: center;
   margin-left: auto;
   cursor: pointer;
-
-  &:focus .modal__close-icon,
-  &:hover .modal__close-icon {
-    fill: $blue;
-  }
 }
 
 .modal__close-icon {
   fill: $black;
   transition: fill $time $cubic;
+  .modal__close-button:focus &,
+  .modal__close-button:hover & {
+    fill: $blue;
+  }
 }
 
 .modal__title {
@@ -206,6 +205,12 @@
   opacity: 0;
   .modal__checkbox:checked + .modal__checkbox-label & {
     opacity: 1;
+  }
+}
+
+@media screen and (min-width: 460px) {
+  .modal {
+    width: 450px;
   }
 }
 

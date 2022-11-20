@@ -1,88 +1,85 @@
 .services {
   padding-bottom: 60px;
+}
+.services__title {
+  margin-bottom: 30px;
+  font-size: 28px;
+  line-height: calc(33 / 28);
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: $dark;
+}
+.services__item {
+  width: min(370px, 100%);
+  display: block;
+  position: relative;
+  margin: 0 auto;
+}
+.services__img {
+  width: 100%;
+}
+.services__description {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 27px 0;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: calc(16 / 14);
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: $white;
+  background-color: rgba(47, 48, 58, 0.8);
+}
+.services__list {
+  width: 100%;
+  list-style: none;
 
-  &__title {
-    margin-bottom: 30px;
-    font-size: 28px;
-    line-height: calc(33 / 28);
-    text-align: center;
-    letter-spacing: 0.03em;
-    color: $dark;
-  }
-  &__item {
-    width: min(370px, 100%);
-    display: block;
-    position: relative;
-    margin: 0 auto;
-  }
-  &__img {
-    width: 100%;
-  }
-  &__description {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    padding: 27px 0;
-    text-transform: uppercase;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: calc(16 / 14);
-    text-align: center;
-    letter-spacing: 0.03em;
-    color: $white;
-    background-color: rgba(47, 48, 58, 0.8);
-  }
-  &__list {
-    width: 100%;
-    list-style: none;
-
-    & .services__item:not(:last-child) {
-      margin-bottom: 15px;
-    }
+  & .services__item:not(:last-child) {
+    margin-bottom: 15px;
   }
 }
 
 @media screen and (min-width: 800px) {
-  .services {
-    &__title {
-    }
-    &__list {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      width: 100%;
-      list-style: none;
-      gap: 10px;
+  .services__title {
+  }
+  .services__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    list-style: none;
+    gap: 10px;
 
-      & .services__item:not(:last-child) {
-        margin-bottom: 0px;
-      }
+    & .services__item:not(:last-child) {
+      margin-bottom: 0px;
     }
-    &__item {
-      width: min(370px, 32%);
-      margin: 0;
-    }
+  }
+  .services__item {
+    width: min(370px, 32%);
+    margin: 0;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .services {
     padding-bottom: 94px;
+  }
 
-    &__title {
-      margin-bottom: 50px;
-      font-size: 36px;
-      line-height: calc(42 / 36);
-    }
+  .services__title {
+    margin-bottom: 50px;
+    font-size: 36px;
+    line-height: calc(42 / 36);
+  }
 
-    &__list {
-      flex-wrap: nowrap;
-      gap: 30px;
-    }
+  .services__list {
+    flex-wrap: nowrap;
+    gap: 30px;
+  }
 
-    &__item {
-      width: 370px;
-    }
+  .services__item {
+    width: 370px;
   }
 }
