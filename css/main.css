@@ -4,6 +4,10 @@ body {
   color: #757575;
 }
 
+.modal-open {
+  overflow: hidden;
+}
+
 .container {
   width: min(100%, 1200px);
   margin: auto;

@@ -3,6 +3,9 @@ body {
   font-size: 14px;
   color: $default-gray;
 }
+.modal-open {
+  overflow: hidden;
+}
 .container {
   width: min(100%, 1200px);
   margin: auto;
