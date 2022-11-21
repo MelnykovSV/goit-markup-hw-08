@@ -1342,6 +1342,9 @@ img {
 
 .projects__item {
   width: min(450px, 100%);
+  border-left: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
 }
 
 .projects .card__img {
@@ -1351,6 +1354,7 @@ img {
 .card {
   display: block;
   position: relative;
+  height: 100%;
 }
 .card::after {
   position: absolute;
@@ -1395,9 +1399,6 @@ img {
 }
 
 .card__body {
-  border-left: 1px solid #eeeeee;
-  border-right: 1px solid #eeeeee;
-  border-bottom: 1px solid #eeeeee;
   padding: 20px 24px;
 }
 
@@ -1439,6 +1440,6 @@ img {
     width: min(100%, 1200px);
   }
   .projects__item {
-    width: min(370px, 31%);
+    width: min(370px, 31.5%);
   }
 }/*# sourceMappingURL=main.css.map */
