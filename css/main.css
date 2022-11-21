@@ -637,6 +637,7 @@ img {
   line-height: 1.1428571429;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  text-align: center;
   color: #212121;
 }
 
@@ -675,6 +676,9 @@ img {
     width: min(450px, 47.6%);
     margin: 0 auto;
   }
+  .features-item__title {
+    text-align: left;
+  }
 }
 @media screen and (min-width: 1200px) {
   .features-item {
@@ -682,85 +686,52 @@ img {
   }
 }
 .services {
-  padding-bottom: 60px;
+  display: none;
 }
 
-.services__title {
-  margin-bottom: 30px;
-  font-size: 28px;
-  line-height: 1.1785714286;
-  text-align: center;
-  letter-spacing: 0.03em;
-  color: #212121;
-}
-
-.services__item {
-  width: min(370px, 100%);
-  display: block;
-  position: relative;
-  margin: 0 auto;
-}
-
-.services__img {
-  width: 100%;
-}
-
-.services__description {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  padding: 27px 0;
-  text-transform: uppercase;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.1428571429;
-  text-align: center;
-  letter-spacing: 0.03em;
-  color: white;
-  background-color: rgba(47, 48, 58, 0.8);
-}
-
-.services__list {
-  width: 100%;
-  list-style: none;
-}
-.services__list .services__item:not(:last-child) {
-  margin-bottom: 15px;
-}
-
-@media screen and (min-width: 800px) {
-  .services__list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    width: 100%;
-    list-style: none;
-    gap: 10px;
-  }
-  .services__list .services__item:not(:last-child) {
-    margin-bottom: 0px;
-  }
-  .services__item {
-    width: min(370px, 32%);
-    margin: 0;
-  }
-}
 @media screen and (min-width: 1200px) {
   .services {
     padding-bottom: 94px;
+    display: block;
   }
   .services__title {
     margin-bottom: 50px;
     font-size: 36px;
     line-height: 1.1666666667;
-  }
-  .services__list {
-    flex-wrap: nowrap;
-    gap: 30px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: #212121;
   }
   .services__item {
     width: 370px;
+    display: block;
+    position: relative;
+    margin: 0 auto;
+  }
+  .services__img {
+    width: 100%;
+  }
+  .services__description {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 27px 0;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.1428571429;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: white;
+    background-color: rgba(47, 48, 58, 0.8);
+  }
+  .services__list {
+    width: 100%;
+    display: flex;
+    list-style: none;
+    flex-wrap: nowrap;
+    gap: 30px;
   }
 }
 .our-team {
@@ -1243,15 +1214,21 @@ img {
   bottom: 48px;
   left: 40px;
   display: flex;
+  gap: 5px;
   flex-wrap: wrap;
 }
 
-.mobile-menu__socials-item:not(:first-child) {
-  padding-left: 5px;
-  border-left: 1px solid rgba(33, 33, 33, 0.2);
+.mobile-menu__socials-item {
+  display: flex;
+  gap: 5px;
 }
-.mobile-menu__socials-item:not(:last-child) {
-  padding-right: 5px;
+
+.mobile-menu__socials-item:not(:last-child):after {
+  content: "";
+  display: block;
+  height: 100%;
+  width: 1px;
+  background-color: rgba(33, 33, 33, 0.2);
 }
 
 .mobile-menu__socials-link {
@@ -1271,12 +1248,11 @@ img {
     font-size: 24px;
     line-height: 1.1666666667;
   }
-  .mobile-menu__socials-item:not(:first-child) {
-    padding-left: 10px;
-    border-left: 1px solid rgba(33, 33, 33, 0.2);
+  .mobile-menu__socials-item {
+    gap: 10px;
   }
-  .mobile-menu__socials-item:not(:last-child) {
-    padding-right: 10px;
+  .mobile-menu__socials-list {
+    gap: 10px;
   }
   .mobile-menu__socials-link {
     font-size: 18px;
@@ -1342,9 +1318,6 @@ img {
 
 .projects__item {
   width: min(450px, 100%);
-  border-left: 1px solid #eeeeee;
-  border-right: 1px solid #eeeeee;
-  border-bottom: 1px solid #eeeeee;
 }
 
 .projects .card__img {
@@ -1352,7 +1325,8 @@ img {
 }
 
 .card {
-  display: block;
+  display: flex;
+  flex-direction: column;
   position: relative;
   height: 100%;
 }
@@ -1399,7 +1373,11 @@ img {
 }
 
 .card__body {
+  border-left: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
   padding: 20px 24px;
+  flex-grow: 1;
 }
 
 .projects__item .card__title {

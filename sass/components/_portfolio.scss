@@ -62,9 +62,6 @@
 
 .projects__item {
   width: min(450px, 100%);
-  border-left: 1px solid $border;
-  border-right: 1px solid $border;
-  border-bottom: 1px solid $border;
 }
 
 .projects .card__img {
@@ -72,7 +69,8 @@
 }
 
 .card {
-  display: block;
+  display: flex;
+  flex-direction: column;
   position: relative;
   height: 100%;
 
@@ -123,10 +121,11 @@
   }
 }
 .card__body {
-  // border-left: 1px solid $border;
-  // border-right: 1px solid $border;
-  // border-bottom: 1px solid $border;
+  border-left: 1px solid $border;
+  border-right: 1px solid $border;
+  border-bottom: 1px solid $border;
   padding: 20px 24px;
+  flex-grow: 1;
 }
 
 .projects__item .card__title {

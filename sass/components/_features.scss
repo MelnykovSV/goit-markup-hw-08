@@ -15,6 +15,7 @@
   line-height: calc(16 / 14);
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  text-align: center;
   color: $dark;
 }
 .features-item__description {
@@ -49,6 +50,9 @@
     display: block;
     width: min(450px, 47.6%);
     margin: 0 auto;
+  }
+  .features-item__title {
+    text-align: left;
   }
 }
 
