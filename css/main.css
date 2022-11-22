@@ -39,7 +39,23 @@ a {
   padding-bottom: 60px;
 }
 
+@media screen and (min-width: 480px) {
+  .container {
+    width: min(100%, 480px);
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    width: min(100%, 768px);
+  }
+}
 @media screen and (min-width: 1200px) {
+  .container {
+    width: min(100%, 1200px);
+    margin: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
   .section {
     padding-top: 94px;
     padding-bottom: 94px;
@@ -203,18 +219,6 @@ img {
     fill: #2196f3;
   }
 }
-@media screen and (min-width: 900px) {
-  .header__contacts {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-  }
-  .header__email,
-.header__tel {
-    padding: 32px 0;
-    margin-bottom: 0;
-  }
-}
 @media screen and (min-width: 1200px) {
   .nav {
     gap: 92px;
@@ -231,9 +235,16 @@ img {
     margin-left: 50px;
   }
   .header__contacts {
+    display: flex;
+    align-items: center;
     font-size: 14px;
     line-height: 1.1428571429;
     gap: 50px;
+  }
+  .header__email,
+.header__tel {
+    padding: 32px 0;
+    margin-bottom: 0;
   }
   .mail__icon {
     width: 16px;
@@ -826,15 +837,12 @@ img {
 }
 @media screen and (min-width: 768px) {
   .member-card__pic {
-    width: calc((100vw - 60px) / 2);
+    width: 354px;
   }
 }
 @media screen and (min-width: 960px) {
   .our-team__list {
     justify-content: space-evenly;
-  }
-  .member-card__pic {
-    width: 450px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -889,14 +897,9 @@ img {
   fill: #2196f3;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 768px) {
   .clients__list-item {
     width: calc((100% - 60px) / 3);
-  }
-}
-@media screen and (min-width: 950px) {
-  .clients__list-item {
-    width: calc((100% - 150px) / 6);
   }
 }
 @media screen and (min-width: 1200px) {
@@ -1083,7 +1086,7 @@ img {
   margin-bottom: 60px;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 768px) {
   .footer__main {
     display: flex;
     justify-content: center;
@@ -1396,12 +1399,10 @@ img {
   color: #757575;
 }
 
-@media screen and (min-width: 630px) {
+@media screen and (min-width: 768px) {
   .filters {
     justify-content: center;
   }
-}
-@media screen and (min-width: 768px) {
   .projects {
     justify-content: left;
     margin: 0 auto;

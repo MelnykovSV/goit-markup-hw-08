@@ -151,19 +151,19 @@
   }
 }
 
-@media screen and (min-width: 900px) {
-  .header__contacts {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-  }
+// @media screen and (min-width: 900px) {
+//   .header__contacts {
+//     display: flex;
+//     align-items: center;
+//     gap: 30px;
+//   }
 
-  .header__email,
-  .header__tel {
-    padding: 32px 0;
-    margin-bottom: 0;
-  }
-}
+//   .header__email,
+//   .header__tel {
+//     padding: 32px 0;
+//     margin-bottom: 0;
+//   }
+// }
 
 @media screen and (min-width: 1200px) {
   .nav {
@@ -185,9 +185,17 @@
   }
 
   .header__contacts {
+    display: flex;
+    align-items: center;
     font-size: 14px;
     line-height: calc(16 / 14);
     gap: 50px;
+  }
+
+  .header__email,
+  .header__tel {
+    padding: 32px 0;
+    margin-bottom: 0;
   }
 
   .mail__icon {
