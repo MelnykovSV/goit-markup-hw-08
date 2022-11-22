@@ -146,7 +146,7 @@ img {
     display: flex;
   }
   .menu > .menu__item:not(:first-child) {
-    margin-left: 52px;
+    margin-left: 50px;
   }
   .menu__link {
     position: relative;
@@ -616,7 +616,7 @@ img {
     height: 120px;
   }
 }
-@media screen and (min-width: 950px) {
+@media screen and (min-width: 768px) {
   .modal {
     width: 528px;
   }
@@ -684,7 +684,7 @@ img {
   .features-item {
     margin: 0;
     display: block;
-    width: min(450px, 47.6%);
+    width: 354px;
     margin: 0 auto;
   }
   .features-item__title {
@@ -1267,6 +1267,7 @@ img {
   justify-content: left;
   flex-wrap: wrap;
   gap: 15px 8px;
+  max-width: 430px;
   margin-left: auto;
   margin-right: auto;
   list-style: none;
@@ -1401,6 +1402,8 @@ img {
 
 @media screen and (min-width: 768px) {
   .filters {
+    max-width: 100%;
+    max-width: auto;
     justify-content: center;
   }
   .projects {

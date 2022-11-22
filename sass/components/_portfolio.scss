@@ -3,6 +3,7 @@
   justify-content: left;
   flex-wrap: wrap;
   gap: 15px 8px;
+  max-width: 430px;
 
   margin-left: auto;
   margin-right: auto;
@@ -151,6 +152,8 @@
 // }
 @media screen and (min-width: 768px) {
   .filters {
+    max-width: 100%;
+    max-width: auto;
     justify-content: center;
   }
   .projects {

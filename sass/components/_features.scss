@@ -48,7 +48,8 @@
   .features-item {
     margin: 0;
     display: block;
-    width: min(450px, 47.6%);
+    // width: min(450px, 47.6%);
+    width: 354px;
     margin: 0 auto;
   }
   .features-item__title {
